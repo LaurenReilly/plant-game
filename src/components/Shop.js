@@ -1,9 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
-import {Route, Switch} from 'react-router-dom';
 
-import {Home} from './components/Home.js';
-import {Shop} from './components/Shop.js';
 
 let mapStateToProps = (state) => {
     return {
@@ -19,26 +16,19 @@ let mapDispatchToProps = (dispatch) => {
     return {
         water: () => dispatch({type: "WATER"}),
         harvest: () => dispatch({type: "HARVEST"}),
+        store: () => dispatch({type: "STORE"}),
         purchase: () => dispatch({type: "PURCHASE"}),
         plant: () => dispatch({type: "PLANT"}),
         changePot: () => dispatch({type: "CHANGE_POT"}),
     }
 }
 
-
-class App extends Component {
-
-  render() {
-      return(
-          <div>
-              <div>Home Page</div>
-              <Switch>
-                <Route exact path="/home" component={Home}></Route>
-                <Route exact path="/store" component={Shop}></Route>
-              </Switch>
-          </div>
-      )
-  }
+let Shop = (props) => {
+    return (
+        <div>
+            
+        </div>
+    )
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Shop);
