@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {Route, Switch} from 'react-router-dom';
 
-import {Home} from './components/Home.js';
-import {Shop} from './components/Shop.js';
+import {Home} from './components/Home';
+import {Shop} from './components/Shop';
 
 let mapStateToProps = (state) => {
     return {
